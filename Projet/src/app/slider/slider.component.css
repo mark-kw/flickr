@@ -1,0 +1,18 @@
+img{
+  max-height: 200px;
+  max-width: 400px;
+}
+
+#btn {
+  padding-left: 45%;
+  background-color: aquamarine;
+}
+
+.card:hover{
+  border-color: black;
+  border-width: 3px;
+}
+
+#allimage{
+  background-color: aquamarine;
+}

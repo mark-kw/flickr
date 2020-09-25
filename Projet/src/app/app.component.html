@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="form-inline" id="search">
+        <input #val type="search" class="form-control" placeholder="Search images">
+        <button class="btn btn-primary" (click)="search(val.value,1)"> Search</button>
+        <button class="btn btn-success" (click)="show()">filter </button>
+    </div>
+    <div  class="form-inline" id="filter" *ngIf="filter">
+      <label><b>Minimum upload date</b> </label>
+      <input [ngModel]= "val1" (ngModelChange)="onchange($event)"  type="date" class="form-control">
+
+      <label><b>Maximum upload date </b></label>
+      <input [ngModel]= "val2" (ngModelChange)="onchange2($event)" type="date" class="form-control">
+
+      <label><b>Geo context</b> </label>
+      <select [ngModel]= "val3" (ngModelChange)="onchange3($event)" class="form-control form-control-sm">
+        <option>indoors</option>
+        <option>outdoors</option>
+        <option></option>
+      </select>
+    </div>
+    <app-slider [images]="tab_images" [display]="display" ></app-slider>
+</body>
+
+</html>

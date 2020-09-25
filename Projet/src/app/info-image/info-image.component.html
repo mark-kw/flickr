@@ -1,0 +1,44 @@
+<div id="info" *ngIf="display">
+    <p><u><b>Informations sur la photo</b></u></p>
+  <div class="row ">
+
+    <div class="col-lg-2">
+      <label><b>Auteur </b>: {{this.tab["auteur"]}}</label>
+    </div>
+
+    <div class="col-lg-2">
+      <label><b>Titre : </b>{{this.tab["title"]}} </label>
+    </div>
+
+    <div class="col-lg-6" style="overflow-y:scroll; max-height:200px" >
+      <label><b>Description </b> : {{this.tab["description"]}} </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+      <label><b>Dimension </b> : {{this.tab["dimension"]}}</label>
+    </div>
+
+    <div class="col-lg-2">
+      <label><b>Posted : </b> {{this.tab["posted"]}}</label>
+    </div>
+
+    <div class="col-lg-2">
+      <label><b>Date uploaded : </b> {{this.tab["dateuploaded"]}}</label>
+    </div>
+
+    <div class="col-lg-2">
+      <label><b>Taken : </b> {{this.tab["taken"]}}</label>
+    </div>
+    <div class="col-lg-2">
+      <label><b>Commentaire </b> : {{this.tab["commentaire"]}}</label>
+    </div>
+  </div>
+
+  <div class ="row">
+    <div class="col-lg-4" *ngFor="let item of tmp | keyvalue">
+        <label><b>{{item.key}} :</b> {{item.value}}</label>
+      </div>
+  </div>
+</div>
+

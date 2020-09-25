@@ -1,0 +1,15 @@
+
+<div *ngIf="display">
+<div class="row" id="allimage">
+  <div class="col-md-6 col-lg-2 p-3" *ngFor="let image of images">
+    <div #img class="card" id="images" data-id ="{{image.id}}">
+        <img src="{{image.url}}_m.jpg" title="{{image.title}}" (click)="getInfo(img.id)">
+    </div>
+  </div>
+</div>
+<div class="row" id="btn">
+  <button class="btn btn-primary" (click)="prevPage()">Previous</button>
+  <button class="btn btn-success" (click)="nextPage()">Next</button>
+</div>
+<app-info-image [tab]="infoImage" [tmp]="loca" [display]="display_info"></app-info-image>
+</div>

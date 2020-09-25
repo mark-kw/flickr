@@ -1,0 +1,23 @@
+#search {
+    background-color: #33D1FF;
+    height: 200px;
+    padding-left: 45%;
+}
+button {
+  margin-left: 2%;
+}
+body{
+  background-color: #33D1FF;
+}
+#filter {
+  padding-bottom: 5% ;
+  padding-left: 3%;
+}
+
+#filter input{
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+
